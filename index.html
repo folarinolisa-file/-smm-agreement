@@ -19,139 +19,57 @@
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --bg: #121212;
-      --card: #1E1E1E;
-      --ink: #F2F2F2;
-      --sub: #B5B5B5;
-      --border: #2E2E2E;
-      --red-light: #3A1414;
+      --bg: #121212; --card: #1E1E1E; --ink: #F2F2F2; --sub: #B5B5B5; --border: #2E2E2E; --red-light: #3A1414;
     }
   }
   :root[data-theme="dark"] {
-    --bg: #121212;
-    --card: #1E1E1E;
-    --ink: #F2F2F2;
-    --sub: #B5B5B5;
-    --border: #2E2E2E;
-    --red-light: #3A1414;
+    --bg: #121212; --card: #1E1E1E; --ink: #F2F2F2; --sub: #B5B5B5; --border: #2E2E2E; --red-light: #3A1414;
   }
   html { scroll-padding-top: env(safe-area-inset-top, 0px); }
   * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.5;
-  }
-  .header {
-    background: var(--red);
-    color: #fff;
-    padding: 28px 20px 22px;
-    padding-top: calc(28px + env(safe-area-inset-top, 0px));
-  }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: Arial, Helvetica, sans-serif; line-height: 1.5; }
+  .header { background: var(--red); color: #fff; padding: 28px 20px 22px; padding-top: calc(28px + env(safe-area-inset-top, 0px)); }
   .header h1 { margin: 0 0 6px; font-size: 22px; }
   .header p { margin: 0; font-size: 14px; color: #FFDCDC; }
   .wrap { max-width: 640px; margin: 0 auto; padding: 0 20px 60px; }
-  .intro {
-    background: var(--red-light);
-    border-radius: 10px;
-    padding: 14px 16px;
-    font-size: 14px;
-    margin: 18px 0;
-    color: var(--ink);
-  }
-  h2 {
-    font-size: 16px;
-    margin: 26px 0 8px;
-    color: var(--red);
-  }
+  .intro { background: var(--red-light); border-radius: 10px; padding: 14px 16px; font-size: 14px; margin: 18px 0; color: var(--ink); }
+  .parties { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px; margin: 18px 0; }
+  .parties .row { margin-bottom: 10px; }
+  .parties .row:last-child { margin-bottom: 0; }
+  .parties .who { font-size: 12px; font-weight: bold; letter-spacing: 1px; color: var(--red); text-transform: uppercase; }
+  .parties .name { font-size: 15px; font-weight: bold; margin-top: 2px; }
+  .parties .detail { font-size: 13px; color: var(--sub); }
+  h2 { font-size: 16px; margin: 26px 0 8px; color: var(--red); }
   ol.terms { padding-left: 20px; margin: 6px 0; }
   ol.terms li { margin-bottom: 6px; font-size: 14.5px; }
   p.body-text { font-size: 14.5px; margin: 6px 0; }
-  .fields-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 18px;
-    margin-top: 10px;
-  }
+  .fields-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px; margin-top: 10px; }
   .fields-card h2 { margin-top: 0; }
-  label {
-    display: block;
-    font-size: 13px;
-    font-weight: bold;
-    margin: 14px 0 5px;
-    color: var(--ink);
-  }
-  select, input[type="text"], input[type="date"] {
-    width: 100%;
-    padding: 11px 12px;
-    border-radius: 8px;
-    border: 1px solid var(--border);
-    background: var(--bg);
-    color: var(--ink);
-    font-size: 15px;
-    font-family: inherit;
+  label { display: block; font-size: 13px; font-weight: bold; margin: 14px 0 5px; color: var(--ink); }
+  .req { color: var(--red); }
+  select, input[type="text"], input[type="date"], input[type="email"], input[type="tel"] {
+    width: 100%; padding: 11px 12px; border-radius: 8px; border: 1px solid var(--border);
+    background: var(--bg); color: var(--ink); font-size: 15px; font-family: inherit;
   }
   .fee-note { font-size: 13px; color: var(--sub); margin-top: 4px; }
-  .checkbox-row {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    margin-top: 20px;
-    font-size: 14px;
-  }
+  .checkbox-row { display: flex; align-items: flex-start; gap: 10px; margin-top: 20px; font-size: 14px; }
   .checkbox-row input { margin-top: 3px; width: 18px; height: 18px; flex-shrink: 0; }
-  .agree-btn {
-    width: 100%;
-    background: var(--red);
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    padding: 15px;
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 20px;
-    cursor: pointer;
-  }
-  .agree-btn:disabled { opacity: 0.5; }
+  .agree-btn { width: 100%; background: var(--red); color: #fff; border: none; border-radius: 10px; padding: 15px; font-size: 16px; font-weight: bold; margin-top: 20px; cursor: pointer; }
   .error { color: var(--red); font-size: 13px; margin-top: 8px; display: none; }
-  .confirm {
-    display: none;
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 20px;
-    margin-top: 20px;
-    text-align: center;
-  }
+  .confirm { display: none; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-top: 20px; text-align: center; }
   .confirm h2 { margin-top: 0; }
   .confirm textarea {
-    width: 100%;
-    min-height: 120px;
-    border-radius: 8px;
-    border: 1px solid var(--border);
-    padding: 10px;
-    font-size: 13.5px;
-    font-family: inherit;
-    color: var(--ink);
-    background: var(--bg);
-    margin-top: 12px;
+    width: 100%; min-height: 150px; border-radius: 8px; border: 1px solid var(--border); padding: 10px;
+    font-size: 13.5px; font-family: inherit; color: var(--ink); background: var(--bg); margin-top: 12px;
   }
-  .copy-btn {
-    width: 100%;
-    background: var(--ink);
-    color: var(--bg);
-    border: none;
-    border-radius: 10px;
-    padding: 13px;
-    font-size: 15px;
-    font-weight: bold;
-    margin-top: 12px;
-    cursor: pointer;
+  .whatsapp-btn, .email-btn {
+    display: block; width: 100%; color: #fff; border: none; border-radius: 10px; padding: 14px; font-size: 15px;
+    font-weight: bold; margin-top: 12px; cursor: pointer; text-decoration: none; text-align: center;
   }
-  .copy-note { font-size: 12.5px; color: var(--sub); margin-top: 10px; }
+  .whatsapp-btn { background: #128C4A; }
+  .email-btn { background: var(--red); }
+  .copy-link { display: inline-block; margin-top: 14px; font-size: 13px; color: var(--sub); text-decoration: underline; background: none; border: none; cursor: pointer; }
+  .copy-note { font-size: 12.5px; color: var(--sub); margin-top: 12px; }
   .footer-note { font-size: 12px; color: var(--sub); margin-top: 30px; text-align: center; }
 </style>
 </head>
@@ -165,6 +83,18 @@
   <div class="wrap">
     <div class="intro">Please read the Agreement below, then fill in your details at the bottom to accept it.</div>
 
+    <div class="parties">
+      <div class="row">
+        <div class="who">Provider</div>
+        <div class="name">Cornelius Adefolarin Olisa</div>
+        <div class="detail">+234 816 590 5622 &nbsp;|&nbsp; folarinolisa@yahoo.com &nbsp;|&nbsp; Abuja, Nigeria</div>
+      </div>
+      <div class="row">
+        <div class="who">Client</div>
+        <div class="detail">Identified below in Section 16, by full name, business name, email, and phone number, entered at the time of acceptance.</div>
+      </div>
+    </div>
+
     <h2>1. Definitions</h2>
     <ol class="terms">
       <li>"Creative" means one piece of content, such as a single graphic, carousel, or video.</li>
@@ -172,7 +102,7 @@
     </ol>
 
     <h2>2. Services</h2>
-    <p class="body-text">The Provider will deliver the plan selected below, as described in the Provider's Rate Card, which forms part of this Agreement. Full plan details are set out in the fields at the end of this page.</p>
+    <p class="body-text">The Provider will deliver the plan selected below, as described in the Provider's Rate Card, which forms part of this Agreement. A change to the Client's plan, upgrade or downgrade, takes effect from the next billing cycle, unless both parties agree otherwise in writing.</p>
 
     <h2>3. Term</h2>
     <p class="body-text">This Agreement begins on the start date given below and continues monthly until either party ends it. Either party may pause or end the Agreement with at least 2 weeks' notice, given in writing (email or WhatsApp is sufficient).</p>
@@ -184,6 +114,8 @@
       <li>Advertising budget (ad spend), where applicable, is paid directly by the Client to the platform and is separate from this fee.</li>
       <li>Extra platforms beyond the selected plan can be added for ₦100,000 per platform per month.</li>
       <li>Urgent requests made with under 48 hours' notice attract an additional rush charge.</li>
+      <li>If a monthly payment is not received within 3 business days of its due date, the Provider may pause work until payment is received, without this being treated as a delay caused by the Provider.</li>
+      <li>If the Client ends this Agreement partway through a paid month for their own convenience, fees already paid for that month are non refundable, since the Provider has reserved capacity for the Client. If the Provider is unable to substantially deliver the agreed Services in a paid month, a fair partial refund for the undelivered portion will be given.</li>
     </ol>
 
     <h2>5. What The Client Provides</h2>
@@ -197,33 +129,42 @@
       <li>CRM tool access, where CRM setup is included in the plan.</li>
     </ol>
 
-    <h2>6. Revisions</h2>
+    <h2>6. Client Supplied Content</h2>
+    <p class="body-text">The Client confirms that any materials given to the Provider, including photos, videos, logos, and text, are either owned by the Client or properly licensed for use. The Client agrees to be responsible for any claims arising from the use of materials the Client supplies.</p>
+
+    <h2>7. Revisions</h2>
     <p class="body-text">Each post includes 1 free round of revisions. Extra changes attract a small additional fee, agreed before the work is done.</p>
 
-    <h2>7. Ownership</h2>
-    <p class="body-text">Once fully paid for, all content created for the Client belongs to the Client. The Provider may showcase the work in a portfolio or case study, unless the Client requests otherwise in writing.</p>
+    <h2>8. Ownership</h2>
+    <p class="body-text">Once fully paid for, all content created for the Client belongs to the Client. The Provider may showcase the work in a portfolio or case study, unless the Client requests otherwise in writing. The Client's social media accounts, including their followers and account history, remain the property of the Client at all times. The Provider will not change primary account passwords or recovery details without the Client's knowledge, and will return full access to the Client promptly at the end of this Agreement.</p>
 
-    <h2>8. Independent Contractor</h2>
+    <h2>9. Independent Contractor</h2>
     <p class="body-text">The Provider is an independent contractor, not an employee of the Client, and is responsible for their own taxes.</p>
 
-    <h2>9. Confidentiality</h2>
+    <h2>10. Confidentiality</h2>
     <p class="body-text">Both parties agree to keep confidential information, such as business plans, login details, and financial information, private, and not to share it with third parties without permission.</p>
 
-    <h2>10. No Guarantee of Results</h2>
+    <h2>11. No Guarantee of Results</h2>
     <p class="body-text">The Provider will carry out the Services with reasonable skill and care but does not guarantee specific results, such as follower counts, sales, or engagement, since these depend on factors outside the Provider's control, including platform algorithm changes.</p>
 
-    <h2>11. Termination</h2>
-    <p class="body-text">Either party may end this Agreement with 2 weeks' written notice. Fees already paid for work completed are non refundable. Work in progress at the time of termination will be completed or handed over as agreed.</p>
+    <h2>12. Force Majeure</h2>
+    <p class="body-text">Neither party is responsible for delays caused by events outside their reasonable control, including power or internet outages, platform outages, natural disasters, or government action. The affected party will inform the other as soon as reasonably possible, and timelines will be adjusted accordingly.</p>
 
-    <h2>12. Governing Law</h2>
+    <h2>13. Termination</h2>
+    <p class="body-text">Either party may end this Agreement with 2 weeks' written notice. Work in progress at the time of termination will be completed or handed over as agreed.</p>
+
+    <h2>14. Entire Agreement</h2>
+    <p class="body-text">This Agreement, together with the Provider's Rate Card, represents the full understanding between the Provider and the Client, and replaces any earlier discussions or messages on the same subject, except where this Agreement specifically refers to them.</p>
+
+    <h2>15. Governing Law</h2>
     <p class="body-text">This Agreement is governed by the laws of the Federal Republic of Nigeria.</p>
 
     <div class="fields-card">
-      <h2 style="margin-top:0">13. Plan and Acceptance</h2>
+      <h2 style="margin-top:0">16. Plan and Acceptance</h2>
 
       <label for="plan">Plan Selected</label>
       <select id="plan">
-        <option value="Tier 1: Starter (2 platforms)" data-fee="₦180,000/month">Tier 1: Starter, 2 platforms</option>
+        <option value="Tier 1: Starter (up to 2 platforms)" data-fee="₦180,000/month">Tier 1: Starter, up to 2 platforms</option>
         <option value="Tier 2: Growth (up to 2 platforms)" data-fee="₦320,000/month">Tier 2: Growth, up to 2 platforms</option>
         <option value="Tier 3: Scale (up to 2 platforms)" data-fee="₦480,000/month">Tier 3: Scale, up to 2 platforms</option>
         <option value="Tier 4: Full Suite (all 5 platforms)" data-fee="₦750,000/month">Tier 4: Full Suite, all 5 platforms</option>
@@ -237,11 +178,17 @@
       <label for="startDate">Start Date</label>
       <input type="date" id="startDate">
 
-      <label for="clientName">Your Full Name (this is your signature)</label>
+      <label for="clientName">Your Full Name <span class="req">(required, this is your signature)</span></label>
       <input type="text" id="clientName" placeholder="Full name">
 
-      <label for="businessName">Business Name</label>
+      <label for="businessName">Business Name <span class="req">(required)</span></label>
       <input type="text" id="businessName" placeholder="Business or brand name">
+
+      <label for="clientEmail">Your Email Address <span class="req">(required)</span></label>
+      <input type="email" id="clientEmail" placeholder="you@example.com">
+
+      <label for="clientPhone">Your Phone Number <span class="req">(required)</span></label>
+      <input type="tel" id="clientPhone" placeholder="e.g. 0801 234 5678">
 
       <div class="checkbox-row">
         <input type="checkbox" id="agreeBox">
@@ -249,15 +196,17 @@
       </div>
 
       <button class="agree-btn" id="agreeBtn">I Agree &amp; Accept</button>
-      <div class="error" id="errorMsg">Please fill in your name, business name, and tick the box above.</div>
+      <div class="error" id="errorMsg">Please fill in your name, business name, email, phone number, and tick the box above.</div>
     </div>
 
     <div class="confirm" id="confirmBox">
       <h2>Agreement Accepted</h2>
       <p class="body-text" id="confirmText"></p>
-      <textarea id="summaryText" readonly></textarea>
-      <button class="copy-btn" id="copyBtn">Copy Confirmation to Send on WhatsApp</button>
-      <div class="copy-note">Send this copied message to Cornelius to complete the process.</div>
+      <a class="whatsapp-btn" id="waBtn" href="#" target="_blank" rel="noopener">Send via WhatsApp</a>
+      <a class="email-btn" id="emailBtn" href="#">Send Email Confirmation</a>
+      <button class="copy-link" id="copyBtn">Or copy the confirmation text</button>
+      <textarea id="summaryText" readonly style="display:none;"></textarea>
+      <div class="copy-note">Sending on both gives you and Cornelius a matching, dated record.</div>
     </div>
 
     <div class="footer-note">Cornelius Adefolarin Olisa &nbsp;|&nbsp; +234 816 590 5622 &nbsp;|&nbsp; folarinolisa@yahoo.com</div>
@@ -267,6 +216,8 @@
   const planSelect = document.getElementById('plan');
   const feeNote = document.getElementById('feeNote');
   const startDate = document.getElementById('startDate');
+  const PROVIDER_PHONE = '2348165905622';
+  const PROVIDER_EMAIL = 'folarinolisa@yahoo.com';
 
   function updateFee() {
     const opt = planSelect.options[planSelect.selectedIndex];
@@ -275,17 +226,18 @@
   planSelect.addEventListener('change', updateFee);
   updateFee();
 
-  // default start date to today
   const today = new Date();
   startDate.value = today.toISOString().slice(0, 10);
 
   document.getElementById('agreeBtn').addEventListener('click', function () {
     const name = document.getElementById('clientName').value.trim();
     const business = document.getElementById('businessName').value.trim();
+    const email = document.getElementById('clientEmail').value.trim();
+    const phone = document.getElementById('clientPhone').value.trim();
     const agreed = document.getElementById('agreeBox').checked;
     const errorMsg = document.getElementById('errorMsg');
 
-    if (!name || !agreed) {
+    if (!name || !business || !email || !phone || !agreed) {
       errorMsg.style.display = 'block';
       return;
     }
@@ -301,15 +253,31 @@
     const confirmText = document.getElementById('confirmText');
     confirmText.textContent = 'Thank you, ' + name + '. Your agreement has been recorded as of ' + timestamp + '.';
 
-    const summary = 'I, ' + name + (business ? ' on behalf of ' + business : '') +
-      ', confirm I have read and agree to the Social Media Management Service Agreement with Cornelius Adefolarin Olisa.\n\n' +
+    const summary = 'SOCIAL MEDIA MANAGEMENT SERVICE AGREEMENT, CONFIRMED\n\n' +
+      'Provider: Cornelius Adefolarin Olisa\n' +
+      'Phone: +234 816 590 5622\n' +
+      'Email: ' + PROVIDER_EMAIL + '\n\n' +
+      'Client: ' + name + '\n' +
+      'Business: ' + business + '\n' +
+      'Phone: ' + phone + '\n' +
+      'Email: ' + email + '\n\n' +
       'Plan: ' + plan + '\n' +
       'Fee: ' + fee + '\n' +
       'Platform(s): ' + platforms + '\n' +
       'Start Date: ' + start + '\n\n' +
+      'I, ' + name + ', confirm I have read and agree to this Agreement.\n' +
       'Accepted electronically on ' + timestamp + '.';
 
     document.getElementById('summaryText').value = summary;
+
+    const waLink = 'https://wa.me/' + PROVIDER_PHONE + '?text=' + encodeURIComponent(summary);
+    document.getElementById('waBtn').setAttribute('href', waLink);
+
+    const subject = 'Signed Agreement - ' + name + ' - ' + plan;
+    const mailto = 'mailto:' + PROVIDER_EMAIL + '?cc=' + encodeURIComponent(email) +
+      '&subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(summary);
+    document.getElementById('emailBtn').setAttribute('href', mailto);
+
     document.getElementById('confirmBox').style.display = 'block';
     document.querySelector('.fields-card').style.display = 'none';
     document.getElementById('confirmBox').scrollIntoView({ behavior: 'smooth' });
@@ -317,14 +285,15 @@
 
   document.getElementById('copyBtn').addEventListener('click', function () {
     const text = document.getElementById('summaryText');
+    text.style.display = 'block';
     text.select();
     text.setSelectionRange(0, 999999);
     try {
       navigator.clipboard.writeText(text.value);
-      this.textContent = 'Copied. Paste it in WhatsApp now.';
+      this.textContent = 'Copied to clipboard.';
     } catch (e) {
       document.execCommand('copy');
-      this.textContent = 'Copied. Paste it in WhatsApp now.';
+      this.textContent = 'Copied to clipboard.';
     }
   });
 </script>
