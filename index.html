@@ -253,19 +253,18 @@
     const confirmText = document.getElementById('confirmText');
     confirmText.textContent = 'Thank you, ' + name + '. Your agreement has been recorded as of ' + timestamp + '.';
 
-    const summary = 'SOCIAL MEDIA MANAGEMENT SERVICE AGREEMENT, CONFIRMED\n\n' +
-      'Provider: Cornelius Adefolarin Olisa\n' +
+    const summary = 'I, ' + name + ', on behalf of ' + business + ', confirm that I have read and agree to the Social Media Management Service Agreement with Cornelius Adefolarin Olisa.\n\n' +
+      'Client Contact\n' +
+      'Email: ' + email + '\n' +
+      'Phone: ' + phone + '\n\n' +
+      'Provider Contact\n' +
+      'Cornelius Adefolarin Olisa\n' +
       'Phone: +234 816 590 5622\n' +
       'Email: ' + PROVIDER_EMAIL + '\n\n' +
-      'Client: ' + name + '\n' +
-      'Business: ' + business + '\n' +
-      'Phone: ' + phone + '\n' +
-      'Email: ' + email + '\n\n' +
       'Plan: ' + plan + '\n' +
       'Fee: ' + fee + '\n' +
       'Platform(s): ' + platforms + '\n' +
       'Start Date: ' + start + '\n\n' +
-      'I, ' + name + ', confirm I have read and agree to this Agreement.\n' +
       'Accepted electronically on ' + timestamp + '.';
 
     document.getElementById('summaryText').value = summary;
