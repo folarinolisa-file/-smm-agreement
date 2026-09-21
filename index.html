@@ -11,45 +11,38 @@
     --ink: #1A1A1A;
     --sub: #5A5A5A;
     --bg: #FFFFFF;
-    --card: #F7F7F7;
-    --border: #E5E5E5;
+    --card: #FBF3F3;
+    --border: #F0D6D6;
     box-sizing: border-box;
     padding-top: env(safe-area-inset-top, 0px);
     padding-bottom: env(safe-area-inset-bottom, 0px);
   }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --bg: #121212; --card: #1E1E1E; --ink: #F2F2F2; --sub: #B5B5B5; --border: #2E2E2E; --red-light: #3A1414;
-    }
-  }
-  :root[data-theme="dark"] {
-    --bg: #121212; --card: #1E1E1E; --ink: #F2F2F2; --sub: #B5B5B5; --border: #2E2E2E; --red-light: #3A1414;
-  }
   html { scroll-padding-top: env(safe-area-inset-top, 0px); }
   * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--ink); font-family: Arial, Helvetica, sans-serif; line-height: 1.5; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: Arial, Helvetica, sans-serif; line-height: 1.6; }
   .header { background: var(--red); color: #fff; padding: 28px 20px 22px; padding-top: calc(28px + env(safe-area-inset-top, 0px)); }
   .header h1 { margin: 0 0 6px; font-size: 22px; }
   .header p { margin: 0; font-size: 14px; color: #FFDCDC; }
   .wrap { max-width: 640px; margin: 0 auto; padding: 0 20px 60px; }
-  .intro { background: var(--red-light); border-radius: 10px; padding: 14px 16px; font-size: 14px; margin: 18px 0; color: var(--ink); }
+  .intro { background: var(--red-light); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; font-size: 14px; margin: 18px 0; color: var(--ink); }
   .parties { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px; margin: 18px 0; }
   .parties .row { margin-bottom: 10px; }
   .parties .row:last-child { margin-bottom: 0; }
   .parties .who { font-size: 12px; font-weight: bold; letter-spacing: 1px; color: var(--red); text-transform: uppercase; }
   .parties .name { font-size: 15px; font-weight: bold; margin-top: 2px; }
   .parties .detail { font-size: 13px; color: var(--sub); }
-  h2 { font-size: 16px; margin: 26px 0 8px; color: var(--red); }
-  ol.terms { padding-left: 20px; margin: 6px 0; }
-  ol.terms li { margin-bottom: 6px; font-size: 14.5px; }
-  p.body-text { font-size: 14.5px; margin: 6px 0; }
+  h2 { font-size: 16px; margin: 28px 0 10px; color: var(--red); }
+  ol.terms { padding-left: 20px; margin: 8px 0; }
+  ol.terms li { margin-bottom: 8px; font-size: 14.5px; }
+  p.body-text { font-size: 14.5px; margin: 10px 0; }
   .fields-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px; margin-top: 10px; }
   .fields-card h2 { margin-top: 0; }
   label { display: block; font-size: 13px; font-weight: bold; margin: 14px 0 5px; color: var(--ink); }
-  .req { color: var(--red); }
+  .req { color: var(--red); font-weight: normal; }
+  .optional { color: var(--sub); font-weight: normal; font-size: 12px; }
   select, input[type="text"], input[type="date"], input[type="email"], input[type="tel"] {
     width: 100%; padding: 11px 12px; border-radius: 8px; border: 1px solid var(--border);
-    background: var(--bg); color: var(--ink); font-size: 15px; font-family: inherit;
+    background: #fff; color: var(--ink); font-size: 15px; font-family: inherit;
   }
   .fee-note { font-size: 13px; color: var(--sub); margin-top: 4px; }
   .checkbox-row { display: flex; align-items: flex-start; gap: 10px; margin-top: 20px; font-size: 14px; }
@@ -59,8 +52,8 @@
   .confirm { display: none; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-top: 20px; text-align: center; }
   .confirm h2 { margin-top: 0; }
   .confirm textarea {
-    width: 100%; min-height: 150px; border-radius: 8px; border: 1px solid var(--border); padding: 10px;
-    font-size: 13.5px; font-family: inherit; color: var(--ink); background: var(--bg); margin-top: 12px;
+    width: 100%; min-height: 160px; border-radius: 8px; border: 1px solid var(--border); padding: 10px;
+    font-size: 13.5px; font-family: inherit; color: var(--ink); background: #fff; margin-top: 12px;
   }
   .whatsapp-btn, .email-btn {
     display: block; width: 100%; color: #fff; border: none; border-radius: 10px; padding: 14px; font-size: 15px;
@@ -95,48 +88,52 @@
       </div>
     </div>
 
+    <p class="body-text">This Agreement is made between Cornelius Adefolarin Olisa ("the Provider") and the Client named below, for the social media management services described in this Agreement.</p>
+
     <h2>1. Definitions</h2>
     <ol class="terms">
       <li>"Creative" means one piece of content, such as a single graphic, carousel, or video.</li>
-      <li>"Post" means one creative published across the platform or platforms included in the Client's plan. The same creative is shared across every included platform. The number of platforms does not multiply the number of creatives produced.</li>
+      <li>"Post" means one creative published across the platform or platforms included in the Client's plan. The same creative is shared across every included platform. The number of platforms included in a plan does not multiply the number of creatives produced.</li>
     </ol>
 
     <h2>2. Services</h2>
-    <p class="body-text">The Provider will deliver the plan selected below, as described in the Provider's Rate Card, which forms part of this Agreement. A change to the Client's plan, upgrade or downgrade, takes effect from the next billing cycle, unless both parties agree otherwise in writing.</p>
+    <p class="body-text">The Provider will deliver the plan selected below, as described in the Provider's Rate Card, which forms part of this Agreement. A change to the Client's plan, whether an upgrade or a downgrade, takes effect from the next billing cycle, unless both parties agree otherwise in writing.</p>
 
     <h2>3. Term</h2>
-    <p class="body-text">This Agreement begins on the start date given below and continues monthly until either party ends it. Either party may pause or end the Agreement with at least 2 weeks' notice, given in writing (email or WhatsApp is sufficient).</p>
+    <p class="body-text">This Agreement begins on the start date given below and continues monthly until either party ends it. Either party may pause or end the Agreement with at least two weeks' notice, given in writing (email or WhatsApp is sufficient).</p>
 
     <h2>4. Fees and Payment</h2>
     <ol class="terms">
-      <li>Full payment is due before work begins each month, or before a one off job begins under Pay As You Go.</li>
+      <li>Full payment is due before work begins each month, or before a one-off job begins under Pay As You Go.</li>
       <li>Payment is made by bank transfer to the Provider's account, details to be shared separately.</li>
       <li>Advertising budget (ad spend), where applicable, is paid directly by the Client to the platform and is separate from this fee.</li>
       <li>Extra platforms beyond the selected plan can be added for ₦100,000 per platform per month.</li>
       <li>Urgent requests made with under 48 hours' notice attract an additional rush charge.</li>
-      <li>If a monthly payment is not received within 3 business days of its due date, the Provider may pause work until payment is received, without this being treated as a delay caused by the Provider.</li>
-      <li>If the Client ends this Agreement partway through a paid month for their own convenience, fees already paid for that month are non refundable, since the Provider has reserved capacity for the Client. If the Provider is unable to substantially deliver the agreed Services in a paid month, a fair partial refund for the undelivered portion will be given.</li>
+      <li>If a monthly payment is not received <strong>WITHIN 3 BUSINESS DAYS</strong> of its due date, the Provider may pause work until payment is received, without this being treated as a delay caused by the Provider.</li>
+      <li>If the Client ends this Agreement partway through a paid month for their own convenience, fees already paid for that month are <strong>NON-REFUNDABLE</strong>, since the Provider has reserved capacity for the Client. If the Provider is unable to substantially deliver the agreed Services in a paid month, a fair partial refund for the undelivered portion will be given.</li>
     </ol>
 
     <h2>5. What The Client Provides</h2>
     <ol class="terms">
+      <li>Login details for any AI tools the Client already uses, where applicable.</li>
       <li>Brand materials: logo, brand colors, and any existing brand guidelines.</li>
       <li>Raw content: product photos, videos, or footage, where the plan does not include full AI content creation.</li>
       <li>Login, or admin and collaborator access, to the relevant social media accounts.</li>
       <li>One point of contact for approvals and feedback.</li>
-      <li>Content and approvals at least 2 business days before the scheduled posting date.</li>
+      <li>Content and approvals <strong>AT LEAST 2 BUSINESS DAYS</strong> before the scheduled posting date.</li>
       <li>Ad account access and budget, where ad campaigns are included.</li>
       <li>CRM tool access, where CRM setup is included in the plan.</li>
     </ol>
 
-    <h2>6. Client Supplied Content</h2>
+    <h2>6. Client-Supplied Content</h2>
     <p class="body-text">The Client confirms that any materials given to the Provider, including photos, videos, logos, and text, are either owned by the Client or properly licensed for use. The Client agrees to be responsible for any claims arising from the use of materials the Client supplies.</p>
 
     <h2>7. Revisions</h2>
-    <p class="body-text">Each post includes 1 free round of revisions. Extra changes attract a small additional fee, agreed before the work is done.</p>
+    <p class="body-text">Each post includes 2 free rounds of revisions. Extra changes attract a small additional fee, agreed before the work is done.</p>
 
     <h2>8. Ownership</h2>
-    <p class="body-text">Once fully paid for, all content created for the Client belongs to the Client. The Provider may showcase the work in a portfolio or case study, unless the Client requests otherwise in writing. The Client's social media accounts, including their followers and account history, remain the property of the Client at all times. The Provider will not change primary account passwords or recovery details without the Client's knowledge, and will return full access to the Client promptly at the end of this Agreement.</p>
+    <p class="body-text">Once fully paid for, all content created for the Client belongs to the Client. The Provider may showcase the work in a portfolio or case study, unless the Client requests otherwise in writing.</p>
+    <p class="body-text">The Client's social media accounts, including their followers and account history, remain the property of the Client <strong>AT ALL TIMES</strong>. The Provider will not change primary account passwords or recovery details without the Client's knowledge, and will return full access to the Client promptly at the end of this Agreement.</p>
 
     <h2>9. Independent Contractor</h2>
     <p class="body-text">The Provider is an independent contractor, not an employee of the Client, and is responsible for their own taxes.</p>
@@ -151,13 +148,13 @@
     <p class="body-text">Neither party is responsible for delays caused by events outside their reasonable control, including power or internet outages, platform outages, natural disasters, or government action. The affected party will inform the other as soon as reasonably possible, and timelines will be adjusted accordingly.</p>
 
     <h2>13. Termination</h2>
-    <p class="body-text">Either party may end this Agreement with 2 weeks' written notice. Work in progress at the time of termination will be completed or handed over as agreed.</p>
+    <p class="body-text">Either party may end this Agreement with <strong>2 WEEKS' WRITTEN NOTICE</strong>. Work in progress at the time of termination will be completed or handed over as agreed.</p>
 
     <h2>14. Entire Agreement</h2>
     <p class="body-text">This Agreement, together with the Provider's Rate Card, represents the full understanding between the Provider and the Client, and replaces any earlier discussions or messages on the same subject, except where this Agreement specifically refers to them.</p>
 
     <h2>15. Governing Law</h2>
-    <p class="body-text">This Agreement is governed by the laws of the Federal Republic of Nigeria.</p>
+    <p class="body-text">This Agreement is governed by the laws of the Federal Republic of Nigeria, and both parties agree that the courts of Abuja, Nigeria, have jurisdiction over any dispute arising from it.</p>
 
     <div class="fields-card">
       <h2 style="margin-top:0">16. Plan and Acceptance</h2>
@@ -184,6 +181,9 @@
       <label for="businessName">Business Name <span class="req">(required)</span></label>
       <input type="text" id="businessName" placeholder="Business or brand name">
 
+      <label for="clientRole">Your Role or Title <span class="optional">(only if signing on behalf of a registered company)</span></label>
+      <input type="text" id="clientRole" placeholder="e.g. Director, President, Owner">
+
       <label for="clientEmail">Your Email Address <span class="req">(required)</span></label>
       <input type="email" id="clientEmail" placeholder="you@example.com">
 
@@ -192,7 +192,7 @@
 
       <div class="checkbox-row">
         <input type="checkbox" id="agreeBox">
-        <label for="agreeBox" style="margin:0; font-weight:normal;">I have read and agree to the Social Media Management Service Agreement above.</label>
+        <label for="agreeBox" style="margin:0; font-weight:normal;">I confirm I am authorized to accept this Agreement on behalf of the business named above, and that doing so counts as my signature.</label>
       </div>
 
       <button class="agree-btn" id="agreeBtn">I Agree &amp; Accept</button>
@@ -232,6 +232,7 @@
   document.getElementById('agreeBtn').addEventListener('click', function () {
     const name = document.getElementById('clientName').value.trim();
     const business = document.getElementById('businessName').value.trim();
+    const role = document.getElementById('clientRole').value.trim();
     const email = document.getElementById('clientEmail').value.trim();
     const phone = document.getElementById('clientPhone').value.trim();
     const agreed = document.getElementById('agreeBox').checked;
@@ -253,16 +254,27 @@
     const confirmText = document.getElementById('confirmText');
     confirmText.textContent = 'Thank you, ' + name + '. Your agreement has been recorded as of ' + timestamp + '.';
 
-    const summary = 'I, ' + name + ', on behalf of ' + business + ', confirm that I have read and agree to the Social Media Management Service Agreement with Cornelius Adefolarin Olisa.\n\n' +
-      'Client Contact\n' +
-      'Email: ' + email + '\n' +
-      'Phone: ' + phone + '\n\n' +
-      'Provider Contact\n' +
+    const declaration = role
+      ? 'I, ' + name + ', ' + role + ' of ' + business + ', confirm that I am authorized to accept this Agreement on behalf of ' + business + ', and that I have read, understood, and agree to be bound by the Social Media Management Service Agreement with Cornelius Adefolarin Olisa. This electronic acceptance carries the same legal effect as a handwritten signature.'
+      : 'I, ' + name + ', confirm that I own or am authorized to act for ' + business + ', and that I have read, understood, and agree to be bound by the Social Media Management Service Agreement with Cornelius Adefolarin Olisa. This electronic acceptance carries the same legal effect as a handwritten signature.';
+
+    const clientInfoLines = [
+      'Name: ' + name,
+      'Business: ' + business,
+    ];
+    if (role) { clientInfoLines.push('Role: ' + role); }
+    clientInfoLines.push('Email: ' + email);
+    clientInfoLines.push('Phone: ' + phone);
+
+    const summary = declaration + '\n\n' +
+      'Client Information\n' + clientInfoLines.join('\n') + '\n\n' +
+      'Provider Information\n' +
       'Cornelius Adefolarin Olisa\n' +
       'Phone: +234 816 590 5622\n' +
       'Email: ' + PROVIDER_EMAIL + '\n\n' +
+      'Service Plan\n' +
       'Plan: ' + plan + '\n' +
-      'Fee: ' + fee + '\n' +
+      'Monthly Fee: ' + fee + '\n' +
       'Platform(s): ' + platforms + '\n' +
       'Start Date: ' + start + '\n\n' +
       'Accepted electronically on ' + timestamp + '.';
@@ -273,8 +285,9 @@
     document.getElementById('waBtn').setAttribute('href', waLink);
 
     const subject = 'Signed Agreement - ' + name + ' - ' + plan;
+    const emailBody = summary.replace(/\n/g, '\r\n');
     const mailto = 'mailto:' + PROVIDER_EMAIL + '?cc=' + encodeURIComponent(email) +
-      '&subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(summary);
+      '&subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(emailBody);
     document.getElementById('emailBtn').setAttribute('href', mailto);
 
     document.getElementById('confirmBox').style.display = 'block';
